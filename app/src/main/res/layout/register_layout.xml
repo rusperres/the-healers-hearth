@@ -1,63 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:background="#12100E">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- REGISTER CARD -->
+    <LinearLayout
+        android:id="@+id/registerCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="REGISTER"
-        android:textSize="20sp" />
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#1B1815"
+        android:layout_margin="24dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name" />
+        <!-- Icon -->
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_grimoire"
+            android:tint="#C6A664"
+            android:layout_marginBottom="12dp"/>
 
-    <EditText
-        android:id="@+id/etAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Age" />
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INITIATE INTO THE HEARTH"
+            android:textColor="#C6A664"
+            android:textSize="16sp"
+            android:fontFamily="serif"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp"/>
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email/Phone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:textColor="#F2EAD3"
+            android:textSize="22sp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="18dp"/>
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <!-- Name -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Name"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="10dp"/>
 
-    <EditText
-        android:id="@+id/etConfirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirm"
-        android:inputType="textPassword" />
+        <!-- Age -->
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Age"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="REGISTER" />
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Email or Phone"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/tvAlreadyAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account?" />
+        <!-- Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="10dp"/>
 
-</LinearLayout>
+        <!-- Confirm -->
+        <EditText
+            android:id="@+id/etConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- REGISTER BUTTON -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="BEGIN JOURNEY"
+            android:textColor="#12100E"
+            android:backgroundTint="#C6A664"
+            android:fontFamily="serif"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- LOGIN LINK -->
+        <TextView
+            android:id="@+id/tvAlreadyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Sign in"
+            android:textColor="#8A7F6A"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

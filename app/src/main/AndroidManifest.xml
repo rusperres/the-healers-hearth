@@ -13,8 +13,9 @@
         android:theme="@style/Theme.TheHealersHearth"
         tools:targetApi="31">
         <activity android:name=".ui.MenuGrimoireActivity" />
+        <activity android:name=".ui.IngredientDetailsActivity" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".ui.LoginScreen"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -1,56 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:background="#12100E">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- LOGIN CARD -->
+    <LinearLayout
+        android:id="@+id/loginCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="THE HEALER'S HEARTH" />
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#1B1815"
+        android:layout_margin="24dp"
+        android:gravity="center_horizontal"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:textSize="20sp" />
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_grimoire"
+            android:tint="#C6A664"
+            android:layout_marginBottom="12dp"/>
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email/Phone" />
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THE HEALER'S HEARTH"
+            android:textColor="#C6A664"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp"/>
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="#F2EAD3"
+            android:textSize="22sp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="20dp"/>
 
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?" />
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Email or Phone"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="12dp"/>
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LOGIN" />
+        <!-- Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#F2EAD3"
+            android:hintTextColor="#8A7F6A"
+            android:background="#231F1B"
+            android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/tvNotSignedUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not Signed Up Yet?" />
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#7A9E7E"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp"/>
 
-</LinearLayout>
+        <!-- LOGIN BUTTON -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="ENTER THE HEARTH"
+            android:textColor="#12100E"
+            android:backgroundTint="#C6A664"
+            android:fontFamily="serif"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Signup -->
+        <TextView
+            android:id="@+id/tvNotSignedUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not signed up yet? Create account"
+            android:textColor="#8A7F6A"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
