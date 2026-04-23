@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_grimoire"
+        android:icon="@drawable/ic_grimoire"
+        android:title="Grimoire"/>
+
+    <item
+        android:id="@+id/nav_brew"
+        android:icon="@drawable/ic_brew"
+        android:title="Brew"/>
+
+    <item
+        android:id="@+id/nav_recommend"
+        android:icon="@drawable/ic_recommend"
+        android:title="Tonic"/>
+
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history"
+        android:title="History"/>
+
+</menu>
