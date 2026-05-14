@@ -44,8 +44,12 @@ class RegisterActivity : AppCompatActivity() {
 
             // TEMP REGISTER LOGIC
             Toast.makeText(this, "Welcome, $n", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java)
 
-            startActivity(Intent(this, LoginActivity::class.java))
+            intent.putExtra("registered_email", e)
+            intent.putExtra("registered_password", p)
+
+            startActivity(intent)
             finish()
         }
 

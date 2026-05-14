@@ -10,7 +10,20 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.thehealershearth.R
 
 class LoginActivity : AppCompatActivity() {
+    // DATA CLASS
+    data class User(
+        val email: String,
+        val password: String
+    )
 
+    // MOCK USERS
+    private val mockUsers = mutableListOf(
+        User("admin@healershearth.com", "1234"),
+        User("healer@healershearth.com", "mana"),
+        User("mage@healershearth.com", "fireball"),
+        User("knight@healershearth.com", "shield"),
+        User("alchemist@healershearth.com", "potion")
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -21,6 +34,16 @@ class LoginActivity : AppCompatActivity() {
         val loginBtn = findViewById<Button>(R.id.btnLogin)
         val forgot = findViewById<TextView>(R.id.tvForgotPassword)
         val signup = findViewById<TextView>(R.id.tvNotSignedUp)
+
+        val registeredEmail = intent.getStringExtra("registered_email")
+        val registeredPassword = intent.getStringExtra("registered_password")
+
+        if (
+            !registeredEmail.isNullOrEmpty() &&
+            !registeredPassword.isNullOrEmpty()
+        ) {
+            mockUsers.add(User(registeredEmail, registeredPassword))
+        }
 
         // LOGIN BUTTON
         loginBtn.setOnClickListener {
@@ -33,13 +56,20 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // TEMP LOGIN LOGIC (replace later with backend)
-            if (emailText == "admin" && passText == "1234") {
+            val validUser = mockUsers.any {
+                it.email == emailText && it.password == passText
+            }
+
+
+            if (validUser) {
+
                 Toast.makeText(this, "Welcome to the Hearth", Toast.LENGTH_SHORT).show()
 
                 startActivity(Intent(this, MenuGrimoireActivity::class.java))
                 finish()
+
             } else {
+
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show()
             }
         }

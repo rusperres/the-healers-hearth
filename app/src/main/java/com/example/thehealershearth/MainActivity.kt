@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.thehealershearth.ui.LoginActivity
 import com.example.thehealershearth.ui.MenuGrimoireActivity
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Redirect directly to Menu Grimoire for debugging
-        startActivity(Intent(this, MenuGrimoireActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
 
         // Close MainActivity so it doesn't stay in back stack
         finish()

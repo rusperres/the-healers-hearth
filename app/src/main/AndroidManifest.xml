@@ -15,7 +15,10 @@
         <activity android:name=".ui.MenuGrimoireActivity" />
         <activity android:name=".ui.IngredientDetailsActivity" />
         <activity
-            android:name=".ui.LoginScreen"
+            android:name=".ui.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
