@@ -16,7 +16,6 @@ class LoginActivity : AppCompatActivity() {
         val password: String
     )
 
-    // MOCK USERS
     private val mockUsers = mutableListOf(
         User("admin@healershearth.com", "1234"),
         User("healer@healershearth.com", "mana"),
@@ -45,7 +44,6 @@ class LoginActivity : AppCompatActivity() {
             mockUsers.add(User(registeredEmail, registeredPassword))
         }
 
-        // LOGIN BUTTON
         loginBtn.setOnClickListener {
 
             val emailText = email.text.toString().trim()
@@ -74,12 +72,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // FORGOT PASSWORD
         forgot.setOnClickListener {
             Toast.makeText(this, "Healing ritual coming soon", Toast.LENGTH_SHORT).show()
         }
 
-        // GO TO REGISTER
         signup.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }

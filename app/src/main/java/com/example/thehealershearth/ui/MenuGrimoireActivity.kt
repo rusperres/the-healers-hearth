@@ -11,17 +11,17 @@ import com.example.thehealershearth.model.Ingredient
 
 class MenuGrimoireActivity : AppCompatActivity() {
 
+    private val ingredients = listOf(
+        Ingredient("Chamomile", R.drawable.ic_ingredient_placeholder),
+        Ingredient("Mint", R.drawable.ic_ingredient_placeholder),
+        Ingredient("Lavender", R.drawable.ic_ingredient_placeholder)
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_grimoire)
 
         val recyclerView = findViewById<RecyclerView>(R.id.ingredientsRecyclerView)
 
-        val ingredients = listOf(
-            Ingredient("Chamomile", R.drawable.ic_ingredient_placeholder),
-            Ingredient("Mint", R.drawable.ic_ingredient_placeholder),
-            Ingredient("Lavender", R.drawable.ic_ingredient_placeholder)
-        )
         Log.d("GRIMOIRE", "Activity opened")
 
         recyclerView.layoutManager = LinearLayoutManager(this)
