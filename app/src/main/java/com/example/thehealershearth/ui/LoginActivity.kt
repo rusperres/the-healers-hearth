@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.thehealershearth.R
+import com.example.thehealershearth.data.UserManager
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,7 +23,8 @@ class LoginActivity : AppCompatActivity() {
         val forgot = findViewById<TextView>(R.id.tvForgotPassword)
         val signup = findViewById<TextView>(R.id.tvNotSignedUp)
 
-        // LOGIN BUTTON
+        val userManager = UserManager(this)
+
         loginBtn.setOnClickListener {
 
             val emailText = email.text.toString().trim()
@@ -33,10 +35,8 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // TEMP LOGIN LOGIC (replace later with backend)
-            if (emailText == "admin" && passText == "1234") {
+            if (userManager.validateUser(emailText, passText)) {
                 Toast.makeText(this, "Welcome to the Hearth", Toast.LENGTH_SHORT).show()
-
                 startActivity(Intent(this, MenuGrimoireActivity::class.java))
                 finish()
             } else {
@@ -44,12 +44,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // FORGOT PASSWORD
         forgot.setOnClickListener {
-            Toast.makeText(this, "Healing ritual coming soon", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
 
-        // GO TO REGISTER
         signup.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }

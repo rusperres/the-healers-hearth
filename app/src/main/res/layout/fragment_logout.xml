@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#12100E"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to depart from the Hearth?"
+        android:textColor="#E0C9A6"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:fontFamily="serif"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnLogoutConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Depart (Logout)"
+        android:backgroundTint="#8B4513"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnLogoutCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remain"
+        android:backgroundTint="#2F4F4F"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

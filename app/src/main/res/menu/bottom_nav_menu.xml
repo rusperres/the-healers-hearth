@@ -7,14 +7,14 @@
         android:title="Grimoire"/>
 
     <item
-        android:id="@+id/nav_brew"
-        android:icon="@drawable/ic_brew"
-        android:title="Brew"/>
-
-    <item
         android:id="@+id/nav_recommend"
         android:icon="@drawable/ic_recommend"
         android:title="Tonic"/>
+
+    <item
+        android:id="@+id/nav_order"
+        android:icon="@drawable/ic_order"
+        android:title="Order"/>
 
     <item
         android:id="@+id/nav_history"

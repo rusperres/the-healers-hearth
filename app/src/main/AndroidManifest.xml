@@ -14,9 +14,14 @@
         tools:targetApi="31">
         <activity android:name=".ui.MenuGrimoireActivity" />
         <activity android:name=".ui.IngredientDetailsActivity" />
-        <activity
-            android:name=".ui.LoginScreen"
-            android:exported="false" />
+        <activity android:name=".ui.BrewCustomizationActivity" />
+        <activity android:name=".ui.OrderPickupActivity" />
+        <activity android:name=".ui.BrewRecommendationsActivity" />
+        <activity android:name=".ui.RecommendationDetailsActivity" />
+        <activity android:name=".ui.OrderHistoryActivity" />
+        <activity android:name=".ui.LoginActivity" android:exported="true" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.ForgotPasswordActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -8,6 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.thehealershearth.R
+import com.example.thehealershearth.data.UserManager
+import com.example.thehealershearth.model.User
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -42,11 +44,22 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // TEMP REGISTER LOGIC
-            Toast.makeText(this, "Welcome, $n", Toast.LENGTH_SHORT).show()
+            // REGISTER LOGIC
+            val userManager = UserManager(this)
+            
+            if (userManager.exists(e)) {
+                Toast.makeText(this, "Email already registered", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+            val newUser = User(n, a, e, p)
+            if (userManager.addUser(newUser)) {
+                Toast.makeText(this, "Welcome, $n! Your account is ready.", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            } else {
+                Toast.makeText(this, "Error during initiation rituals", Toast.LENGTH_SHORT).show()
+            }
         }
 
         loginLink.setOnClickListener {

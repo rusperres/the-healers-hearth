@@ -16,6 +16,13 @@ class IngredientDetailsActivity : AppCompatActivity() {
         val icon = intent.getIntExtra("icon", 0)
 
         findViewById<TextView>(R.id.ingredientName).text = name
-        findViewById<ImageView>(R.id.ingredientImage).setImageResource(icon)
+        findViewById<ImageView>(R.id.ingredientImage).apply {
+            setImageResource(icon)
+            imageTintList = null
+        }
+
+        findViewById<ImageView>(R.id.backButton).setOnClickListener {
+            finish()
+        }
     }
 }

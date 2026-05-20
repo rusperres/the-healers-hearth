@@ -28,8 +28,8 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:src="@drawable/ic_grimoire"
-            android:tint="#C6A664"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="12dp"
+            app:tint="#C6A664" />
 
         <!-- Title -->
         <TextView
@@ -60,7 +60,7 @@
             android:hint="Email or Phone"
             android:padding="12dp"
             android:textColor="#F2EAD3"
-            android:hintTextColor="#8A7F6A"
+            android:textColorHint="#8A7F6A"
             android:background="#231F1B"
             android:layout_marginBottom="12dp"/>
 
@@ -73,7 +73,7 @@
             android:inputType="textPassword"
             android:padding="12dp"
             android:textColor="#F2EAD3"
-            android:hintTextColor="#8A7F6A"
+            android:textColorHint="#8A7F6A"
             android:background="#231F1B"
             android:layout_marginBottom="8dp"/>
 

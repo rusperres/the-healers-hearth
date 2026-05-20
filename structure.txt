@@ -1,0 +1,176 @@
+the-healers-hearth/
+├── app/
+│   ├── src/
+│   │   ├── androidTest/
+│   │   │   └── java/
+│   │   │       └── com/
+│   │   │           └── example/
+│   │   │               └── thehealershearth/
+│   │   │                   └── ExampleInstrumentedTest.kt
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── example/
+│   │   │   │           └── thehealershearth/
+│   │   │   │               ├── adapter/
+│   │   │   │               │   └── IngredientAdapter.kt
+│   │   │   │               ├── model/
+│   │   │   │               │   └── Ingredient.kt
+│   │   │   │               ├── ui/
+│   │   │   │               │   ├── fragments/
+│   │   │   │               │   │   ├── menugrimoire/
+│   │   │   │               │   │   │   └── IngredientsListFragment.kt
+│   │   │   │               │   │   ├── BottomNavFragment.kt
+│   │   │   │               │   │   └── HeaderFragment.kt
+│   │   │   │               │   ├── IngredientDetailsActivity.kt
+│   │   │   │               │   ├── LoginActivity.kt
+│   │   │   │               │   ├── MenuGrimoireActivity.kt
+│   │   │   │               │   └── RegisterActivity.kt
+│   │   │   │               └── MainActivity.kt
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/
+│   │   │   │   │   ├── ic_launcher_background.xml
+│   │   │   │   │   └── ic_launcher_foreground.xml
+│   │   │   │   ├── layout/
+│   │   │   │   │   ├── activity_ingredient_details.xml
+│   │   │   │   │   ├── activity_login.xml
+│   │   │   │   │   ├── activity_main.xml
+│   │   │   │   │   ├── activity_menu_grimoire.xml
+│   │   │   │   │   ├── activity_register.xml
+│   │   │   │   │   ├── forgotpassword_layout.xml
+│   │   │   │   │   ├── fragment_bottom_nav.xml
+│   │   │   │   │   ├── fragment_header.xml
+│   │   │   │   │   ├── fragment_ingredient_list.xml
+│   │   │   │   │   └── item_ingredient.xml
+│   │   │   │   ├── menu/
+│   │   │   │   │   └── bottom_nav_menu.xml
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   ├── ic_launcher.xml
+│   │   │   │   │   └── ic_launcher_round.xml
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   ├── values/
+│   │   │   │   │   ├── colors.xml
+│   │   │   │   │   ├── strings.xml
+│   │   │   │   │   ├── styles.xml
+│   │   │   │   │   └── themes.xml
+│   │   │   │   ├── values-night/
+│   │   │   │   │   └── themes.xml
+│   │   │   │   └── xml/
+│   │   │   │       ├── backup_rules.xml
+│   │   │   │       └── data_extraction_rules.xml
+│   │   │   └── AndroidManifest.xml
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/
+│   │               └── example/
+│   │                   └── thehealershearth/
+│   │                       └── ExampleUnitTest.kt
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   └── proguard-rules.pro
+├── gradle/
+│   ├── wrapper/
+│   │   └── gradle-wrapper.properties
+│   └── libs.versions.toml
+├── .gitignore
+├── build.gradle.kts
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── local.properties
+├── README.md
+├── script.py
+├── settings.gradle.kts
+└── structure.txt
+the-healers-hearth/
+├── app/
+│   ├── src/
+│   │   ├── androidTest/
+│   │   │   └── java/
+│   │   │       └── com/
+│   │   │           └── example/
+│   │   │               └── thehealershearth/
+│   │   │                   └── ExampleInstrumentedTest.kt
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── example/
+│   │   │   │           └── thehealershearth/
+│   │   │   │               ├── adapter/
+│   │   │   │               │   └── IngredientAdapter.kt
+│   │   │   │               ├── model/
+│   │   │   │               │   └── Ingredient.kt
+│   │   │   │               ├── ui/
+│   │   │   │               │   ├── fragments/
+│   │   │   │               │   │   ├── menugrimoire/
+│   │   │   │               │   │   │   └── IngredientsListFragment.kt
+│   │   │   │               │   │   ├── BottomNavFragment.kt
+│   │   │   │               │   │   └── HeaderFragment.kt
+│   │   │   │               │   ├── IngredientDetailsActivity.kt
+│   │   │   │               │   ├── LoginActivity.kt
+│   │   │   │               │   ├── MenuGrimoireActivity.kt
+│   │   │   │               │   └── RegisterActivity.kt
+│   │   │   │               └── MainActivity.kt
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/
+│   │   │   │   │   ├── ic_launcher_background.xml
+│   │   │   │   │   └── ic_launcher_foreground.xml
+│   │   │   │   ├── layout/
+│   │   │   │   │   ├── activity_ingredient_details.xml
+│   │   │   │   │   ├── activity_login.xml
+│   │   │   │   │   ├── activity_main.xml
+│   │   │   │   │   ├── activity_menu_grimoire.xml
+│   │   │   │   │   ├── activity_register.xml
+│   │   │   │   │   ├── forgotpassword_layout.xml
+│   │   │   │   │   ├── fragment_bottom_nav.xml
+│   │   │   │   │   ├── fragment_header.xml
+│   │   │   │   │   ├── fragment_ingredient_list.xml
+│   │   │   │   │   └── item_ingredient.xml
+│   │   │   │   ├── menu/
+│   │   │   │   │   └── bottom_nav_menu.xml
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   ├── ic_launcher.xml
+│   │   │   │   │   └── ic_launcher_round.xml
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   ├── values/
+│   │   │   │   │   ├── colors.xml
+│   │   │   │   │   ├── strings.xml
+│   │   │   │   │   ├── styles.xml
+│   │   │   │   │   └── themes.xml
+│   │   │   │   ├── values-night/
+│   │   │   │   │   └── themes.xml
+│   │   │   │   └── xml/
+│   │   │   │       ├── backup_rules.xml
+│   │   │   │       └── data_extraction_rules.xml
+│   │   │   └── AndroidManifest.xml
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/
+│   │               └── example/
+│   │                   └── thehealershearth/
+│   │                       └── ExampleUnitTest.kt
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   └── proguard-rules.pro
+├── gradle/
+│   ├── wrapper/
+│   │   └── gradle-wrapper.properties
+│   └── libs.versions.toml
+├── .gitignore
+├── build.gradle.kts
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── local.properties
+├── README.md
+├── script.py
+├── settings.gradle.kts
+└── structure.txt

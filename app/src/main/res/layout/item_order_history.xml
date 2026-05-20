@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#1B1815"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/orderIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order #12345"
+            android:textColor="#C6A664"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/orderDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: 2026-05-20"
+            android:textColor="#F2EAD3"
+            android:fontFamily="serif"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/orderItemsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Items: 2x Elixir, 1x Frappe"
+            android:textColor="#F2EAD3"
+            android:fontFamily="serif"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/orderTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: Php 1200"
+            android:textColor="#7A9E7E"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12100E">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/headerFragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:name="com.example.thehealershearth.ui.fragments.HeaderFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerFragmentContainer"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavFragmentContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:textColor="#F2EAD3"
+            android:fontFamily="serif"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderSummaryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/emptyStateText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="Please brew or choose from the recommendations!"
+            android:textColor="#F2EAD3"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: Php 1200"
+            android:textColor="#C6A664"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/pickupTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickup Time: 10-15 minutes"
+            android:textColor="#F2EAD3"
+            android:fontFamily="serif"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/pickupLocationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickup Location: The Healer's Hearth"
+            android:textColor="#F2EAD3"
+            android:fontFamily="serif"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#7A9E7E"
+            android:textColor="#12100E"
+            android:text="Place Order"
+            android:fontFamily="serif"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottomNavFragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:name="com.example.thehealershearth.ui.fragments.BottomNavFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

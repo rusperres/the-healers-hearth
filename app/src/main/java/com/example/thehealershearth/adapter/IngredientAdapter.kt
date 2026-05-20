@@ -30,6 +30,7 @@ class IngredientAdapter(
         val item = items[position]
         holder.name.text = item.name
         holder.icon.setImageResource(item.icon)
+        holder.icon.imageTintList = null
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, IngredientDetailsActivity::class.java)
             intent.putExtra("name", item.name)
